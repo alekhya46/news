@@ -1,0 +1,28 @@
+<!-- <div>
+    <input class="" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</div> -->
+<div class="input-group">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" placeholder="Search" [(ngModel)]="value">
+    <button type="button" class="btn btn-outline-primary" (click)="sendToService()">search</button>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-md-3 card h-200" *ngFor="let nd of displayData">
+            <div class="card bg-success">
+                title :{{nd.title}}
+            </div>
+            <div class="card-body">
+                <img src="{{nd.urlToImage}}" alt="" width="100%">
+                <u> <em>author :{{nd.author}}</em></u>
+                <h5 class="mt-3 mb-3"></h5>
+
+                <!-- <p> content :{{nd.content}}</p> -->
+                <!-- <p>description :{{ng.description}}</p> -->
+                <a class="btn btn-dark btn-sm" target="_black" href="{{nd.url}}">read more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
